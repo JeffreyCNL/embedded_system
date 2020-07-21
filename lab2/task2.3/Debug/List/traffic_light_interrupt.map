@@ -1,0 +1,212 @@
+###############################################################################
+#
+# IAR ELF Linker V8.11.3.13950/W32 for ARM                05/Nov/2019  14:01:31
+# Copyright 2007-2017 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\Users\User\Documents\UW ME\cse474(embedded
+#        system)\lab\lab2\task2.3\Debug\Exe\traffic_light_interrupt.out
+#    Map file     =  
+#        D:\Users\User\Documents\UW ME\cse474(embedded
+#        system)\lab\lab2\task2.3\Debug\List\traffic_light_interrupt.map
+#    Command line =  
+#        -f C:\Users\User\AppData\Local\Temp\EWC89F.tmp
+#        ("D:\Users\User\Documents\UW ME\cse474(embedded
+#        system)\lab\lab2\task2.3\Debug\Obj\cstartup_M.o"
+#        "D:\Users\User\Documents\UW ME\cse474(embedded
+#        system)\lab\lab2\task2.3\Debug\Obj\main.o" -o
+#        "D:\Users\User\Documents\UW ME\cse474(embedded
+#        system)\lab\lab2\task2.3\Debug\Exe\traffic_light_interrupt.out"
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map "D:\Users\User\Documents\UW ME\cse474(embedded
+#        system)\lab\lab2\task2.3\Debug\List\traffic_light_interrupt.map"
+#        --config "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.0\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x20007fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section          Kind        Address    Size  Object
+  -------          ----        -------    ----  ------
+"A0":                                     0x98
+  .intvec          const    0x00000000    0x98  cstartup_M.o [1]
+                          - 0x00000098    0x98
+
+"P1":                                    0x488
+  .text            ro code  0x00000098   0x384  main.o [1]
+  .text            ro code  0x0000041c    0x40  zero_init3.o [5]
+  .text            ro code  0x0000045c    0x28  data_init.o [5]
+  .text            ro code  0x00000484    0x22  fpinit_M.o [4]
+  .iar.init_table  const    0x000004a8    0x10  - Linker created -
+  .text            ro code  0x000004b8     0x2  cstartup_M.o [1]
+  .text            ro code  0x000004bc    0x1a  cmain.o [5]
+  .text            ro code  0x000004d6     0x4  low_level_init.o [3]
+  .text            ro code  0x000004da     0x4  exit.o [3]
+  .text            ro code  0x000004de     0x2  cstartup_M.o [1]
+  .text            ro code  0x000004e0     0xa  cexit.o [5]
+  .text            ro code  0x000004ea     0x2  cstartup_M.o [1]
+  .text            ro code  0x000004ec    0x14  exit.o [6]
+  .text            ro code  0x00000500    0x10  cstartup_M.o [1]
+  .text            ro code  0x00000510     0x2  cstartup_M.o [1]
+  .text            ro code  0x00000512     0x2  cstartup_M.o [1]
+  .text            ro code  0x00000514     0x2  cstartup_M.o [1]
+  .text            ro code  0x00000516     0x2  cstartup_M.o [1]
+  .text            ro code  0x00000518     0x2  cstartup_M.o [1]
+  .text            ro code  0x0000051a     0x2  cstartup_M.o [1]
+  .text            ro code  0x0000051c     0x2  cstartup_M.o [1]
+  .text            ro code  0x0000051e     0x2  cstartup_M.o [1]
+  .rodata          const    0x00000520     0x0  zero_init3.o [5]
+                          - 0x00000520   0x488
+
+"P2", part 1 of 2:                         0x4
+  .bss             zero     0x20000000     0x4  main.o [1]
+                          - 0x20000004     0x4
+
+"P2", part 2 of 2:                      0x1000
+  CSTACK                    0x20000008  0x1000  <Block>
+    CSTACK         uninit   0x20000008  0x1000  <Block tail>
+                          - 0x20001008  0x1000
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x4:
+          0x20000000   0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+D:\Users\User\Documents\UW ME\cse474(embedded system)\lab\lab2\task2.3\Debug\Obj: [1]
+    cstartup_M.o           38      152
+    main.o                900                 4
+    -------------------------------------------
+    Total:                938      152        4
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+m7M_tls.a: [4]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [5]
+    cexit.o                10
+    cmain.o                26
+    data_init.o            40
+    zero_init3.o           64
+    -------------------------------------------
+    Total:                140
+
+shb_l.a: [6]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    2        2
+    Linker created                  16    4 096
+-----------------------------------------------
+    Grand Total:        1 142      170    4 100
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address  Size  Type      Object
+-----                      -------  ----  ----      ------
+.iar.init_table$$Base   0x000004a8         --   Gb  - Linker created -
+.iar.init_table$$Limit  0x000004b8         --   Gb  - Linker created -
+?main                   0x000004bd        Code  Gb  cmain.o [5]
+CSTACK$$Base            0x20000008         --   Gb  - Linker created -
+CSTACK$$Limit           0x20001008         --   Gb  - Linker created -
+GPIO_PortA_Handler      0x000000cb  0x50  Code  Gb  main.o [1]
+Region$$Table$$Base     0x000004a8         --   Gb  - Linker created -
+Region$$Table$$Limit    0x000004b8         --   Gb  - Linker created -
+__cmain                 0x000004bd        Code  Gb  cmain.o [5]
+__exit                  0x000004ed  0x14  Code  Gb  exit.o [6]
+__iar_data_init3        0x0000045d  0x28  Code  Gb  data_init.o [5]
+__iar_init_vfp          0x00000485        Code  Gb  fpinit_M.o [4]
+__iar_program_start     0x00000501  0x10  Code  Gb  cstartup_M.o [1]
+__iar_systems$$module {Abs}
+                        0x00000001        Data  Gb  command line/config [2]
+__iar_zero_init3        0x0000041d  0x40  Code  Gb  zero_init3.o [5]
+__low_level_init        0x000004d7   0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000  0x98  Data  Gb  cstartup_M.o [1]
+_call_main              0x000004c9        Code  Gb  cmain.o [5]
+_exit                   0x000004e1        Code  Gb  cexit.o [5]
+_main                   0x000004d3        Code  Gb  cmain.o [5]
+exit                    0x000004db   0x4  Code  Gb  exit.o [3]
+flag                    0x20000000   0x4  Data  Gb  main.o [1]
+led_init                0x000002c5  0x54  Code  Gb  main.o [1]
+led_off                 0x0000039d  0x10  Code  Gb  main.o [1]
+led_on                  0x0000038f   0xe  Code  Gb  main.o [1]
+main                    0x00000099  0x32  Code  Gb  main.o [1]
+ped_butt                0x00000385   0xa  Code  Gb  main.o [1]
+switch_init             0x00000319  0x6c  Code  Gb  main.o [1]
+timer0_init             0x00000259  0x36  Code  Gb  main.o [1]
+timer1_init             0x0000028f  0x36  Code  Gb  main.o [1]
+traffic_light           0x0000011b  0x6e  Code  Gb  main.o [1]
+wait                    0x00000189  0x2a  Code  Gb  main.o [1]
+wait_test               0x000001b3  0xa6  Code  Gb  main.o [1]
+
+
+[1] = D:\Users\User\Documents\UW ME\cse474(embedded system)\lab\lab2\task2.3\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  1 142 bytes of readonly  code memory
+    170 bytes of readonly  data memory
+  4 100 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
