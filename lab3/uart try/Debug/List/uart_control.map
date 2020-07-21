@@ -1,0 +1,179 @@
+###############################################################################
+#
+# IAR ELF Linker V8.11.3.13950/W32 for ARM                18/Nov/2019  12:07:10
+# Copyright 2007-2017 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\Users\User\Documents\UW ME\cse474(embedded system)\lab\lab3\uart
+#        try\Debug\Exe\uart_control.out
+#    Map file     =  
+#        D:\Users\User\Documents\UW ME\cse474(embedded system)\lab\lab3\uart
+#        try\Debug\List\uart_control.map
+#    Command line =  
+#        -f C:\Users\User\AppData\Local\Temp\EWD6D8.tmp
+#        ("D:\Users\User\Documents\UW ME\cse474(embedded system)\lab\lab3\uart
+#        try\Debug\Obj\cstartup_M.o" "D:\Users\User\Documents\UW
+#        ME\cse474(embedded system)\lab\lab3\uart try\Debug\Obj\main.o" -o
+#        "D:\Users\User\Documents\UW ME\cse474(embedded system)\lab\lab3\uart
+#        try\Debug\Exe\uart_control.out" --redirect _Printf=_PrintfFullNoMb
+#        --redirect _Scanf=_ScanfFullNoMb --map "D:\Users\User\Documents\UW
+#        ME\cse474(embedded system)\lab\lab3\uart
+#        try\Debug\List\uart_control.map" --config "D:\Program Files (x86)\IAR
+#        Systems\Embedded Workbench
+#        8.0\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x20007fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section   Kind        Address    Size  Object
+  -------   ----        -------    ----  ------
+"A0":                              0x90
+  .intvec   const    0x00000000    0x90  cstartup_M.o [1]
+                   - 0x00000090    0x90
+
+"P1":                             0x1fc
+  .text     ro code  0x00000090   0x168  main.o [1]
+  .text     ro code  0x000001f8    0x22  fpinit_M.o [4]
+  .text     ro code  0x0000021a     0x2  cstartup_M.o [1]
+  .text     ro code  0x0000021c    0x1a  cmain.o [5]
+  .text     ro code  0x00000236     0x4  low_level_init.o [3]
+  .text     ro code  0x0000023a     0x4  exit.o [3]
+  .text     ro code  0x0000023e     0x2  cstartup_M.o [1]
+  .text     ro code  0x00000240     0xa  cexit.o [5]
+  .text     ro code  0x0000024a     0x2  cstartup_M.o [1]
+  .text     ro code  0x0000024c    0x14  exit.o [6]
+  .text     ro code  0x00000260    0x10  cstartup_M.o [1]
+  .rodata   const    0x00000270     0xc  main.o [1]
+  .text     ro code  0x0000027c     0x2  cstartup_M.o [1]
+  .text     ro code  0x0000027e     0x2  cstartup_M.o [1]
+  .text     ro code  0x00000280     0x2  cstartup_M.o [1]
+  .text     ro code  0x00000282     0x2  cstartup_M.o [1]
+  .text     ro code  0x00000284     0x2  cstartup_M.o [1]
+  .text     ro code  0x00000286     0x2  cstartup_M.o [1]
+  .text     ro code  0x00000288     0x2  cstartup_M.o [1]
+  .text     ro code  0x0000028a     0x2  cstartup_M.o [1]
+                   - 0x0000028c   0x1fc
+
+"P2":                            0x1000
+  CSTACK             0x20000000  0x1000  <Block>
+    CSTACK  uninit   0x20000000  0x1000  <Block tail>
+                   - 0x20001000  0x1000
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+D:\Users\User\Documents\UW ME\cse474(embedded system)\lab\lab3\uart try\Debug\Obj: [1]
+    cstartup_M.o           38      144
+    main.o                360       12
+    -------------------------------------------
+    Total:                398      156
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+m7M_tls.a: [4]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [5]
+    cexit.o                10
+    cmain.o                26
+    -------------------------------------------
+    Total:                 36
+
+shb_l.a: [6]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Linker created                        4 096
+-----------------------------------------------
+    Grand Total:          496      156    4 096
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address  Size  Type      Object
+-----                      -------  ----  ----      ------
+?main                   0x0000021d        Code  Gb  cmain.o [5]
+CSTACK$$Base            0x20000000         --   Gb  - Linker created -
+CSTACK$$Limit           0x20001000         --   Gb  - Linker created -
+Region$$Table$$Base     0x00000000         --   Gb  - Linker created -
+Region$$Table$$Limit    0x00000000         --   Gb  - Linker created -
+__cmain                 0x0000021d        Code  Gb  cmain.o [5]
+__exit                  0x0000024d  0x14  Code  Gb  exit.o [6]
+__iar_init_vfp          0x000001f9        Code  Gb  fpinit_M.o [4]
+__iar_program_start     0x00000261  0x10  Code  Gb  cstartup_M.o [1]
+__iar_systems$$module {Abs}
+                        0x00000001        Data  Gb  command line/config [2]
+__low_level_init        0x00000237   0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000  0x90  Data  Gb  cstartup_M.o [1]
+_call_main              0x00000229        Code  Gb  cmain.o [5]
+_exit                   0x00000241        Code  Gb  cexit.o [5]
+_main                   0x00000233        Code  Gb  cmain.o [5]
+exit                    0x0000023b   0x4  Code  Gb  exit.o [3]
+main                    0x00000091  0x54  Code  Gb  main.o [1]
+portf_init              0x0000019f  0x14  Code  Gb  main.o [1]
+printChar               0x000000f5  0x10  Code  Gb  main.o [1]
+printString             0x00000105  0x16  Code  Gb  main.o [1]
+readChar                0x000000e5  0x10  Code  Gb  main.o [1]
+uart_init               0x0000011b  0x84  Code  Gb  main.o [1]
+
+
+[1] = D:\Users\User\Documents\UW ME\cse474(embedded system)\lab\lab3\uart try\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+    496 bytes of readonly  code memory
+    156 bytes of readonly  data memory
+  4 096 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
