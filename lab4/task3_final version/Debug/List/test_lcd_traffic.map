@@ -1,0 +1,268 @@
+###############################################################################
+#
+# IAR ELF Linker V8.11.3.13950/W32 for ARM                13/Nov/2019  12:40:40
+# Copyright 2007-2017 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\Users\User\Documents\UW ME\cse474(embedded
+#        system)\lab\lab4\test\Debug\Exe\test_lcd_traffic.out
+#    Map file     =  
+#        D:\Users\User\Documents\UW ME\cse474(embedded
+#        system)\lab\lab4\test\Debug\List\test_lcd_traffic.map
+#    Command line =  
+#        -f C:\Users\User\AppData\Local\Temp\EWECE9.tmp
+#        ("D:\Users\User\Documents\UW ME\cse474(embedded
+#        system)\lab\lab4\test\Debug\Obj\cstartup_M.o"
+#        "D:\Users\User\Documents\UW ME\cse474(embedded
+#        system)\lab\lab4\test\Debug\Obj\main.o" "D:\Users\User\Documents\UW
+#        ME\cse474(embedded system)\lab\lab4\test\Debug\Obj\SSD2119.o" -o
+#        "D:\Users\User\Documents\UW ME\cse474(embedded
+#        system)\lab\lab4\test\Debug\Exe\test_lcd_traffic.out" --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        "D:\Users\User\Documents\UW ME\cse474(embedded
+#        system)\lab\lab4\test\Debug\List\test_lcd_traffic.map" --config
+#        "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.0\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x20007fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section          Kind        Address    Size  Object
+  -------          ----        -------    ----  ------
+"A0":                                     0x98
+  .intvec          const    0x00000000    0x98  cstartup_M.o [1]
+                          - 0x00000098    0x98
+
+"P1":                                   0x1740
+  .text            ro code  0x00000098   0xf28  SSD2119.o [1]
+  .text            ro code  0x00000fc0   0x49c  main.o [1]
+  .rodata          const    0x0000145c   0x1e0  SSD2119.o [1]
+  .text            ro code  0x0000163c    0x40  zero_init3.o [5]
+  .rodata          const    0x0000167c    0x2c  main.o [1]
+  .text            ro code  0x000016a8    0x28  data_init.o [5]
+  .text            ro code  0x000016d0    0x22  fpinit_M.o [4]
+  .iar.init_table  const    0x000016f4    0x10  - Linker created -
+  .text            ro code  0x00001704     0x2  cstartup_M.o [1]
+  .rodata          const    0x00001708    0x20  main.o [1]
+  .rodata          const    0x00001728    0x20  SSD2119.o [1]
+  .text            ro code  0x00001748    0x1a  cmain.o [5]
+  .text            ro code  0x00001762     0x4  low_level_init.o [3]
+  .text            ro code  0x00001766     0x4  exit.o [3]
+  .text            ro code  0x0000176a     0x2  cstartup_M.o [1]
+  .text            ro code  0x0000176c     0xa  cexit.o [5]
+  .text            ro code  0x00001776     0x2  cstartup_M.o [1]
+  .text            ro code  0x00001778    0x14  exit.o [6]
+  .rodata          const    0x0000178c    0x10  main.o [1]
+  .text            ro code  0x0000179c    0x10  cstartup_M.o [1]
+  .rodata          const    0x000017ac     0xc  main.o [1]
+  .rodata          const    0x000017b8     0xc  main.o [1]
+  .rodata          const    0x000017c4     0x8  SSD2119.o [1]
+  .text            ro code  0x000017cc     0x2  cstartup_M.o [1]
+  .text            ro code  0x000017ce     0x2  cstartup_M.o [1]
+  .text            ro code  0x000017d0     0x2  cstartup_M.o [1]
+  .text            ro code  0x000017d2     0x2  cstartup_M.o [1]
+  .text            ro code  0x000017d4     0x2  cstartup_M.o [1]
+  .text            ro code  0x000017d6     0x2  cstartup_M.o [1]
+  .rodata          const    0x000017d8     0x0  zero_init3.o [5]
+                          - 0x000017d8  0x1740
+
+"P2", part 1 of 2:                        0x1c
+  .bss             zero     0x20000000     0x4  main.o [1]
+  .bss             zero     0x20000004     0x4  main.o [1]
+  .bss             zero     0x20000008     0x4  main.o [1]
+  .bss             zero     0x2000000c     0x4  main.o [1]
+  .bss             zero     0x20000010     0x2  SSD2119.o [1]
+  .bss             zero     0x20000012     0x2  SSD2119.o [1]
+  .bss             zero     0x20000014     0x2  SSD2119.o [1]
+  .bss             zero     0x20000016     0x2  SSD2119.o [1]
+  .bss             zero     0x20000018     0x2  SSD2119.o [1]
+  .bss             zero     0x2000001a     0x1  main.o [1]
+                          - 0x2000001b    0x1b
+
+"P2", part 2 of 2:                      0x1000
+  CSTACK                    0x20000020  0x1000  <Block>
+    CSTACK         uninit   0x20000020  0x1000  <Block tail>
+                          - 0x20001020  0x1000
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x1b:
+          0x20000000  0x1b
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+D:\Users\User\Documents\UW ME\cse474(embedded system)\lab\lab4\test\Debug\Obj: [1]
+    SSD2119.o           3 880      520       10
+    cstartup_M.o           34      152
+    main.o              1 180      116       17
+    -------------------------------------------
+    Total:              5 094      788       27
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+m7M_tls.a: [4]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [5]
+    cexit.o                10
+    cmain.o                26
+    data_init.o            40
+    zero_init3.o           64
+    -------------------------------------------
+    Total:                140
+
+shb_l.a: [6]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                             4
+    Linker created                  16    4 096
+-----------------------------------------------
+    Grand Total:        5 296      808    4 123
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x000016f4          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x00001704          --   Gb  - Linker created -
+?main                   0x00001749         Code  Gb  cmain.o [5]
+ADC_Init                0x00000a7f   0xa8  Code  Gb  SSD2119.o [1]
+ADC_Read                0x00000b2d   0x26  Code  Gb  SSD2119.o [1]
+ADC_SetChannel          0x00000b53   0x44  Code  Gb  SSD2119.o [1]
+ASCII                   0x0000145c  0x1e0  Data  Lc  SSD2119.o [1]
+CSTACK$$Base            0x20000020          --   Gb  - Linker created -
+CSTACK$$Limit           0x20001020          --   Gb  - Linker created -
+GPIO_PortA_Handler      0x00000f49    0xe  Code  Gb  SSD2119.o [1]
+LCD_Calibration         0x0000106b   0x56  Code  Gb  main.o [1]
+LCD_DisplayTouchPos     0x000010c1   0x5e  Code  Gb  main.o [1]
+LCD_DrawCircle          0x000007d9  0x14c  Code  Gb  SSD2119.o [1]
+LCD_DrawFilledCircle    0x00000925  0x104  Code  Gb  SSD2119.o [1]
+LCD_DrawFilledRect      0x00000779   0x60  Code  Gb  SSD2119.o [1]
+LCD_DrawPixel           0x00000745   0x34  Code  Gb  SSD2119.o [1]
+LCD_GPIOInit            0x00000099   0x98  Code  Gb  SSD2119.o [1]
+LCD_Init                0x000001e3  0x1a2  Code  Gb  SSD2119.o [1]
+LCD_PrintBinary         0x0000065b   0x8c  Code  Gb  SSD2119.o [1]
+LCD_PrintChar           0x000003af   0xd0  Code  Gb  SSD2119.o [1]
+LCD_PrintFloat          0x000006e7   0x32  Code  Gb  SSD2119.o [1]
+LCD_PrintHex            0x000005eb   0x70  Code  Gb  SSD2119.o [1]
+LCD_PrintInteger        0x0000058b   0x60  Code  Gb  SSD2119.o [1]
+LCD_PrintString         0x0000047f   0x1c  Code  Gb  SSD2119.o [1]
+LCD_SetCursor           0x0000049b    0xe  Code  Gb  SSD2119.o [1]
+LCD_SetTextColor        0x000004a9   0x14  Code  Gb  SSD2119.o [1]
+LCD_WriteCommand        0x00000131   0x56  Code  Gb  SSD2119.o [1]
+LCD_WriteData           0x00000187   0x5c  Code  Gb  SSD2119.o [1]
+Region$$Table$$Base     0x000016f4          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00001704          --   Gb  - Linker created -
+Timer0_Handler          0x0000126f   0xd2  Code  Gb  main.o [1]
+Timer1_Handler          0x00001341   0x40  Code  Gb  main.o [1]
+Touch_Init              0x00000a2d   0x52  Code  Gb  SSD2119.o [1]
+Touch_ReadX             0x00000ba5  0x12c  Code  Gb  SSD2119.o [1]
+Touch_ReadY             0x00000cd5  0x10c  Code  Gb  SSD2119.o [1]
+Touch_ReadZ1            0x00000de1   0xfa  Code  Gb  SSD2119.o [1]
+Touch_XVal              0x20000016    0x2  Data  Gb  SSD2119.o [1]
+Touch_YVal              0x20000018    0x2  Data  Gb  SSD2119.o [1]
+__cmain                 0x00001749         Code  Gb  cmain.o [5]
+__exit                  0x00001779   0x14  Code  Gb  exit.o [6]
+__iar_data_init3        0x000016a9   0x28  Code  Gb  data_init.o [5]
+__iar_init_vfp          0x000016d1         Code  Gb  fpinit_M.o [4]
+__iar_program_start     0x0000179d   0x10  Code  Gb  cstartup_M.o [1]
+__iar_systems$$module {Abs}
+                        0x00000001         Data  Gb  command line/config [2]
+__iar_zero_init3        0x0000163d   0x40  Code  Gb  zero_init3.o [5]
+__low_level_init        0x00001763    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000   0x98  Data  Gb  cstartup_M.o [1]
+_call_main              0x00001755         Code  Gb  cmain.o [5]
+_exit                   0x0000176d         Code  Gb  cexit.o [5]
+_main                   0x0000175f         Code  Gb  cmain.o [5]
+abs                     0x000003a5    0xa  Code  Gb  SSD2119.o [1]
+convertColor            0x00000385   0x20  Code  Gb  SSD2119.o [1]
+cursorX                 0x20000010    0x2  Data  Gb  SSD2119.o [1]
+cursorY                 0x20000012    0x2  Data  Gb  SSD2119.o [1]
+exit                    0x00001767    0x4  Code  Gb  exit.o [3]
+in_switch1              0x00000ee5   0x1a  Code  Gb  SSD2119.o [1]
+in_switch2              0x00000eff   0x4a  Code  Gb  SSD2119.o [1]
+interrupt_init          0x0000111f    0xe  Code  Gb  main.o [1]
+is_pressed              0x00000ffb   0x70  Code  Gb  main.o [1]
+main                    0x00000fc1   0x3a  Code  Gb  main.o [1]
+offset_X                0x20000000    0x4  Data  Gb  main.o [1]
+offset_Y                0x20000004    0x4  Data  Gb  main.o [1]
+printf                  0x000004bd   0xce  Code  Gb  SSD2119.o [1]
+set_state               0x000011c1   0xae  Code  Gb  main.o [1]
+system                  0x2000001a    0x1  Data  Gb  main.o [1]
+textColor               0x20000014    0x2  Data  Gb  SSD2119.o [1]
+timer0_init             0x00001177   0x4a  Code  Gb  main.o [1]
+timer1_init             0x0000112d   0x4a  Code  Gb  main.o [1]
+ui_define               0x00001381   0x6a  Code  Gb  main.o [1]
+xPos                    0x20000008    0x4  Data  Gb  main.o [1]
+yPos                    0x2000000c    0x4  Data  Gb  main.o [1]
+
+
+[1] = D:\Users\User\Documents\UW ME\cse474(embedded system)\lab\lab4\test\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  5 296 bytes of readonly  code memory
+    808 bytes of readonly  data memory
+  4 123 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,15 @@
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armproc.dll" 
+
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armlmiftdi.dll" 
+
+"D:\Users\User\Documents\UW ME\cse474(embedded system)\lab\lab4\task1\Debug\Exe\lcd_driver.out" 
+
+--plugin "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\bin\armbat.dll" 
+
+--device_macro "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\config\debugger\TexasInstruments\TM4C123.dmac" 
+
+--flash_loader "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\config\flashloader\TexasInstruments\FlashTC4_H6_o.board" 
+
+
+
+
