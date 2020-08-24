@@ -1,3 +1,4 @@
+# Timer and Interrupt
 # Procedure
 For the first task, I configure the timer as the lab
 instruction and set GPTMTAILR register as 16M so

@@ -1,3 +1,4 @@
+# Traffic Light System
 # Procedure
 The first thing I approached to this lab is to understand how the register control the hardware. I found
 it hard to control the precise register. However, I
