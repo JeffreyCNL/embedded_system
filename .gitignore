@@ -1,0 +1,7 @@
+*.dep
+*.ewd
+*.ewp
+*.ewt
+*.eww
+*.Debug
+*.pdf
