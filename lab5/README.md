@@ -62,8 +62,8 @@ This final project is cooperate with CSE student Daniel Sullivan,
 with me handling the PWM module and he handled the Ultrasonic sensor module.
 
 # Reference
-[1] Elec Freaks. Ultrasonic ranging module hc-sr04. https://www.electroschematics.com/wp-content/uploads/2013/07/HCSR04-datasheet-version-1.pdf.
-[2] Texas Instruments. Tiva tm4c123gh6pm microcontroller data sheet. http://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf, June 2014.
-[3] OmniVision. Serial camera control bus functional specification. http://www4.cs.umanitoba.ca/~jacky/Teaching/Courses/74.795-LocalVision/ReadingList/ov-sccb.pdff, March 2002.
-[4] OmniVision. Ov7670/ov7171 cmos vga (640x480) camerachip sensor with omnipixel technology.http://web.mit.edu/6.111/www/f2016/tools/OV7670_2006.pdf, August 2006.
-[5] Xnor.ai. Xnor model bundles. https://docs.ai2go.xnor.ai/model_bundles.html.
+[1] Elec Freaks. Ultrasonic ranging module hc-sr04. https://www.electroschematics.com/wp-content/uploads/2013/07/HCSR04-datasheet-version-1.pdf.<br>
+[2] Texas Instruments. Tiva tm4c123gh6pm microcontroller data sheet. http://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf, June 2014.<br>
+[3] OmniVision. Serial camera control bus functional specification. http://www4.cs.umanitoba.ca/~jacky/Teaching/Courses/74.795-LocalVision/ReadingList/ov-sccb.pdff, March 2002.<br>
+[4] OmniVision. Ov7670/ov7171 cmos vga (640x480) camerachip sensor with omnipixel technology.http://web.mit.edu/6.111/www/f2016/tools/OV7670_2006.pdf, August 2006.<br>
+[5] Xnor.ai. Xnor model bundles. https://docs.ai2go.xnor.ai/model_bundles.html.<br>
